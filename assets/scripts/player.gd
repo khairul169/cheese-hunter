@@ -20,7 +20,7 @@ func _ready():
 	set_fixed_process(true);
 
 func _input(ie):
-	if ie.type == InputEvent.MOUSE_MOTION:
+	if ie.type == InputEvent.MOUSE_MOTION && !freeze:
 		var scr_size = get_viewport().get_rect().size;
 		if ie.global_pos.x < scr_size.width/2:
 			get_node("spr").set_flip_h(true);

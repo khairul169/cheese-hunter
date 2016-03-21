@@ -7,11 +7,13 @@ var cheese = 0.0;
 var total_cheese = 0;
 var score = 0.0;
 var high_score = 0.0;
+var levels_parts = 1;
 
 var savegame = File.new();
 var save_path = "user://savegame.bin";
 
 func _ready():
+	get_tree().set_auto_accept_quit(false);
 	load_savegame();
 
 func _notification(what):
